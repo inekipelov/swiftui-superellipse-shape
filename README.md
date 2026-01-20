@@ -16,6 +16,10 @@ A lightweight SwiftUI `Shape` based on the superellipse equation (`|x/a|^n + |y/
 - Animatable: `n` conforms to `Animatable`.
 - Syntactic sugar: `.superellipse` and `.superellipse(n:steps:)` on `Shape`.
 
+## Preview
+
+![Superellipse preview](Resources/preview.gif)
+
 ## Installation
 
 Add via Swift Package Manager:
