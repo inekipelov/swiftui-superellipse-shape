@@ -2,7 +2,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "SuperellipseShape",
+    name: "swift-superellipse-shape",
     platforms: [
         .iOS(.v13),
         .macOS(.v10_15),
