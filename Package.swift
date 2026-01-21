@@ -11,18 +11,18 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "SuperellipseShape",
-            targets: ["SuperellipseShape"]
+            name: "Superellipse",
+            targets: ["Superellipse"]
         )
     ],
     targets: [
         .target(
-            name: "SuperellipseShape",
+            name: "Superellipse",
             path: "Sources"
         ),
         .testTarget(
-            name: "SuperellipseShapeTests",
-            dependencies: ["SuperellipseShape"],
+            name: "SuperellipseTests",
+            dependencies: ["Superellipse"],
             path: "Tests"
         )
     ]

@@ -1,22 +1,22 @@
 import SwiftUI
 import XCTest
-@testable import SuperellipseShape
+@testable import Superellipse
 
-final class SuperellipseShapeTests: XCTestCase {
+final class SuperellipseTests: XCTestCase {
     func testMinimumStepsAreEnforced() {
-        let shape = SuperellipseShape(n: 3, steps: 2)
+        let shape = Superellipse(n: 3, steps: 2)
         XCTAssertEqual(shape.steps, 32)
     }
 
     func testAnimatableDataRoundTrips() {
-        var shape = SuperellipseShape()
+        var shape = Superellipse()
         shape.animatableData = 2.5
         XCTAssertEqual(shape.n, 2.5)
     }
 
     func testPathGeneratesExpectedSegments() {
         let steps = 64
-        let shape = SuperellipseShape(n: 4.5, steps: steps)
+        let shape = Superellipse(n: 4.5, steps: steps)
         let path = shape.path(in: CGRect(x: 0, y: 0, width: 100, height: 60))
 
         var moves = 0

@@ -37,11 +37,11 @@ struct SuperellipsePlayground: View {
 
     private var shapes: some View {
         VStack(spacing: 25) {
-            SuperellipseShape(n: curvature, steps: steps)
+            Superellipse(n: curvature, steps: steps)
                 .fill(fillGradient)
                 .aspectRatio(1, contentMode: .fit)
 
-            SuperellipseShape(n: curvature, steps: steps)
+            Superellipse(n: curvature, steps: steps)
                 .stroke(borderGradient, lineWidth: 5)
                 .aspectRatio(1.4, contentMode: .fit)
         }
@@ -67,7 +67,7 @@ struct SuperellipsePlayground: View {
     }
 }
 
-#Preview("SuperellipseShape demo") {
+#Preview("Superellipse demo") {
     SuperellipsePlayground()
 }
 

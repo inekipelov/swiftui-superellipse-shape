@@ -1,11 +1,11 @@
 //
-//  SuperellipseShape.swift
+//  Superellipse.swift
 //
 
 import SwiftUI
 
 /// Shape based on the superellipse equation: |x/a|^n + |y/b|^n = 1
-public struct SuperellipseShape: Shape {
+public struct Superellipse: Shape {
     /// Controls curvature.
     /// n = 2 -> ellipse
     /// higher n -> more "squarish"
@@ -41,7 +41,7 @@ public struct SuperellipseShape: Shape {
     }
 }
 
-private extension SuperellipseShape {
+private extension Superellipse {
     func point(at t: CGFloat, a: CGFloat, b: CGFloat, n: CGFloat, center: CGPoint) -> CGPoint {
         let c = cos(t)
         let s = sin(t)
@@ -55,9 +55,9 @@ private extension SuperellipseShape {
 
 // MARK: - Syntactic sugar
 
-public extension Shape where Self == SuperellipseShape {
-    static var superellipse: SuperellipseShape { .init() }
-    static func superellipse(n: CGFloat, steps: Int = 256) -> SuperellipseShape {
+public extension Shape where Self == Superellipse {
+    static var superellipse: Superellipse { .init() }
+    static func superellipse(n: CGFloat, steps: Int = 256) -> Superellipse {
         .init(n: n, steps: steps)
     }
 }

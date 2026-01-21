@@ -1,4 +1,4 @@
-# SuperellipseShape
+# Superellipse
 
 [![Swift Version](https://img.shields.io/badge/Swift-5.8+-orange.svg)](https://swift.org/)
 [![SPM](https://img.shields.io/badge/SPM-compatible-brightgreen.svg)](https://swift.org/package-manager/)
@@ -32,7 +32,7 @@ targets: [
     .target(
         name: "YourTarget",
         dependencies: [
-            .product(name: "SuperellipseShape", package: "swiftui-superellipse-shape")
+            .product(name: "Superellipse", package: "swiftui-superellipse-shape")
         ]
     )
 ]
@@ -42,14 +42,14 @@ targets: [
 
 ```swift
 import SwiftUI
-import SuperellipseShape
+import Superellipse
 
 struct ContentView: View {
     @State private var curvature: CGFloat = 4.5
 
     var body: some View {
         VStack(spacing: 24) {
-            SuperellipseShape(n: curvature, steps: 256)
+            Superellipse(n: curvature, steps: 256)
                 .fill(.blue.gradient)
                 .frame(width: 220, height: 140)
 
